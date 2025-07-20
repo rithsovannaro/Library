@@ -10,14 +10,14 @@ void Library::addBook(const Book& book) {
 void Library::displayBooks() const{
     std::cout << std::left
             << std::setw(5) << "Title"
-            << std::setw(15) << "Author"
-            << std::setw(20) << "ISBN" << std::endl;
+            << std::setw(20) << "Author"
+            << std::setw(30) << "ISBN" << std::endl;
 
     for (const auto& b : books) {
         std::cout << std::left
                 << std::setw(5) << b.getTitle()
-                << std::setw(15) << b.getAuthor()
-                << std::setw(20) << b.getISBN() << std::endl;
+                << std::setw(20) << b.getAuthor()
+                << std::setw(30) << b.getISBN() << std::endl;
     }
 }
 void Library::searchBook(const std::string& title) const {
