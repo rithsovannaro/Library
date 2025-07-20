@@ -9,22 +9,29 @@ void Library::addBook(const Book& book) {
 
 void Library::displayBooks() const{
     std::cout << std::left
-            << std::setw(5) << "Title"
-            << std::setw(20) << "Author"
+            << std::setw(12) << "Title" 
+            << std::setw(20) << "Author" 
             << std::setw(30) << "ISBN" << std::endl;
 
     for (const auto& b : books) {
         std::cout << std::left
-                << std::setw(5) << b.getTitle()
-                << std::setw(20) << b.getAuthor()
+                << std::setw(12) << b.getTitle() 
+                << std::setw(20) << b.getAuthor() 
                 << std::setw(30) << b.getISBN() << std::endl;
     }
 }
 void Library::searchBook(const std::string& title) const {
+    std::cout << std::left
+            << std::setw(12) << "Title" 
+            << std::setw(20) << "Author" 
+            << std::setw(30) << "ISBN" << std::endl;
     bool found = false;
-    for (const auto& book : books) {
-        if (book.getTitle() == title) {
-            book.display();
+    for (const auto& b : books) {
+        std::cout << std::left
+                << std::setw(12) << b.getTitle() 
+                << std::setw(20) << b.getAuthor() 
+                << std::setw(30) << b.getISBN() << std::endl;
+        if (b.getTitle() == title) {
             found = true;
         }
     }
